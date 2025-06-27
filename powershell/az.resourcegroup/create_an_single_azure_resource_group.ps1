@@ -20,7 +20,7 @@ catch {
     Write-Error "[ERROR] Failed to Set subscription -> $($subscription_id) | Error Message - $($ERROR[0].Exception.Message.Trim())"
 }
 
-#Create an azure resource group
+#Create an single azure resource group
 try {
     Write-Output "[INFO] Creating New Resource group -> $($resource_group_name)"
     $null = New-AzResourceGroup -Name $resource_group_name -Location  $location -Force
